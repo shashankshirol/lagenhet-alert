@@ -1,0 +1,4 @@
+CREATE: "CREATE TABLE IF NOT EXISTS data (provider TEXT PRIMARY KEY NOT NULL, results TEXT NOT NULL)"
+UPDATE: "UPDATE data SET results = {results_column} WHERE provider = {provider_column};"
+INSERT: "INSERT INTO data (provider, results) values {value};"
+SELECT: "SELECT * from data WHERE provider = {value};"
