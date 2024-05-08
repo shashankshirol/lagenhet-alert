@@ -84,7 +84,7 @@ def check_and_update(connection, provider: str, link: str, wait_param: str):
         # ideally should only return one row because of primary key
         old = entries[0][-1] # gets the results column from the table
         if old != check:
-            db.execute_query(db_queries["UPDATE"].format(results_column="'" + check + "'", provider=provider))
+            db.execute_query(db_queries["UPDATE"].format(results_column="'" + check + "'", provider_column=provider))
             send_email(provider, new_val=check)
         
         else:
